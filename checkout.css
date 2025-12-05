@@ -1,0 +1,91 @@
+.restaurant-page,
+.checkout-page {
+  max-width: 1100px;
+  margin: 90px auto 40px;
+  padding: 0 16px 32px;
+}
+
+.restaurant-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 12px 16px 16px;
+}
+
+.menu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.menu-price {
+  font-weight: 600;
+}
+
+.add-btn,
+.primary-btn,
+.secondary-btn,
+.outline-btn {
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 6px 14px;
+  border: none;
+}
+
+/* cart table */
+
+.cart-section,
+.checkout-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  padding: 16px 20px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.cart-footer,
+.checkout-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

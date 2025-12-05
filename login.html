@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartEats - Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+
+  <div class="login-page">
+    <!-- LEFT IMAGE -->
+    <div class="login-left">
+      <h1 class="brand">SmartEats</h1>
+      <p class="tagline">Hungry? We deliver happiness.</p>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="login-right">
+      <h2>Login</h2>
+
+      <!-- Role Buttons -->
+      <div class="roles">
+        <button class="role-btn active" data-role="customer">Customer</button>
+        <button class="role-btn" data-role="restaurant_owner">Restaurant</button>
+        <button class="role-btn" data-role="delivery_partner">Delivery</button>
+        <button class="role-btn" data-role="admin">Admin</button>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Email</label>
+          <input id="loginEmail" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input id="loginPassword" type="password" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+
+        <p class="switch">Don't have an account?  
+           <a href="signup.html">Sign up</a>
+        </p>
+
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </div>
+  </div>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

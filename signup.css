@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE */
+.signup-left {
+  flex: 1;
+  background-image:
+    linear-gradient(rgba(0, 128, 0, 0.4), rgba(0, 128, 0, 0.4)),
+    url("https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-left h1 {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.signup-left p {
+  font-size: 18px;
+  max-width: 350px;
+}
+
+/* RIGHT SIDE */
+.signup-right {
+  flex: 0.8;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* ROLES */
+.roles {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.role-btn {
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: 1px solid #4CAF50;
+  background: white;
+  color: #4CAF50;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.role-btn.active {
+  background: #4CAF50;
+  color: white;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.switch {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 13px;
+}

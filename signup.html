@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartEats - Sign Up</title>
+  <link rel="stylesheet" href="css/signup.css" />
+</head>
+<body>
+
+  <div class="signup-page">
+
+    <!-- LEFT IMAGE -->
+    <div class="signup-left">
+      <h1>Join SmartEats</h1>
+      <p>Fresh food delivered with love.</p>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="signup-right">
+      <h2>Create Account</h2>
+
+      <div class="roles">
+        <button class="role-btn active" data-role="customer">Customer</button>
+        <button class="role-btn" data-role="restaurant_owner">Restaurant</button>
+        <button class="role-btn" data-role="delivery_partner">Delivery</button>
+      </div>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input id="signupName" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input id="signupEmail" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input id="signupPassword" type="password" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Sign Up</button>
+
+        <p class="switch">Already have an account?
+          <a href="login.html">Login</a>
+        </p>
+
+        <p id="signupMessage" class="message"></p>
+      </form>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

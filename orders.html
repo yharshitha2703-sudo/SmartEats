@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Orders - SmartEats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/customer.css" />
+  <!-- Leaflet CSS (for modal live map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    /* small modal tweaks so it looks OK without extra libs */
+    #trackingModal { box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left"><span class="logo">SmartEats</span></div>
+    <div class="nav-right">
+      <button onclick="goHome()" class="nav-btn">All Restaurants</button>
+      <button onclick="logout()" class="nav-btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-header">
+      <h2>My Orders</h2>
+      <p class="page-subtitle">Track all the orders you have placed.</p>
+    </section>
+
+    <section class="card-section">
+      <div id="ordersList" class="orders-list">
+        <!-- JS fills -->
+      </div>
+    </section>
+  </main>
+
+  <!-- socket.io client (from your backend) -->
+  <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+
+  <!-- leaflet for modal tracking maps -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- app helpers (must be included in this order) -->
+  <script src="js/auth.js"></script>   <!-- exposes getToken/getTokenForRole etc -->
+  <script src="js/api.js"></script>    <!-- exposes apiRequest -->
+  <script src="js/orders.js"></script> <!-- the page logic (below) -->
+</body>
+</html>

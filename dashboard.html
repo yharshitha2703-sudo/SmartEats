@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartEats - Restaurant Dashboard</title>
+
+  <link rel="stylesheet" href="../css/customer.css" />
+  <link rel="stylesheet" href="../css/owner.css" />
+</head>
+
+<body>
+<div class="owner-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="owner-sidebar">
+    <div class="owner-logo">
+      <div class="logo-circle">S</div>
+      <div>
+        <div class="logo-title">SmartEats</div>
+        <div class="logo-sub">Restaurant Panel</div>
+      </div>
+    </div>
+
+    <nav class="owner-nav">
+      <button class="nav-item active" id="nav-orders">Orders</button>
+      <button class="nav-item" id="nav-menu">Menu Items</button>
+      <button class="nav-item" id="nav-profile">Profile</button>
+    </nav>
+
+    <button class="sidebar-logout" onclick="logoutOwner()">Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="owner-main">
+
+    <!-- HEADER -->
+    <header class="owner-header">
+    <div>
+  <h1>Restaurant Dashboard</h1>
+
+  <select id="restaurantDropdown" class="restaurant-select"></select>
+
+  <p id="restaurantName" class="muted"></p>
+</div>
+
+
+      <div class="owner-header-right">
+        <span id="currentDate" class="muted"></span>
+      </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="owner-stats">
+      <div class="stat-card"><p class="stat-label">Today’s Orders</p><p id="todayOrders" class="stat-value">0</p></div>
+      <div class="stat-card"><p class="stat-label">Pending</p><p id="pendingOrders" class="stat-value">0</p></div>
+      <div class="stat-card"><p class="stat-label">Completed</p><p id="completedOrders" class="stat-value">0</p></div>
+
+      <div class="stat-card stat-revenue">
+        <p class="stat-label">Today’s Revenue</p>
+        <p id="todayRevenue" class="stat-value">₹0</p>
+        <div class="revenue-bar"><div class="revenue-bar-fill" id="ownerRevenueBar"></div></div>
+      </div>
+    </section>
+
+    <!-- ORDERS SECTION -->
+    <section id="ordersSection" class="owner-section active-section">
+      <div class="section-header">
+        <h2>Incoming Orders</h2>
+        <select id="statusFilter" onchange="filterOrders()">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="accepted">Accepted</option>
+          <option value="preparing">Preparing</option>
+          <option value="out_for_delivery">Out for delivery</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <div class="orders-table-wrap">
+        <table class="orders-table">
+          <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody id="ownerOrdersBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MENU SECTION (NOW WORKING) -->
+    <section id="menuSection" class="owner-section">
+      <div class="section-header">
+        <h2>Menu Items</h2>
+        <button class="primary-btn" onclick="openAddMenuForm()">+ Add New Item</button>
+      </div>
+
+      <div id="menuList"></div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profileSection" class="owner-section">
+      <div class="section-header"><h2>Restaurant Profile</h2></div>
+      <p class="muted">Add your profile details later.</p>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/owner-dashboard.js"></script>
+
+</body>
+</html>

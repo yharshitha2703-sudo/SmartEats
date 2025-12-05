@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartEats - Restaurants</title>
+  <link rel="stylesheet" href="css/customer.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="logo">SmartEats</span>
+    </div>
+    <div class="nav-right">
+      <button onclick="goToOrders()" class="nav-btn">My Orders</button>
+      <button onclick="logout()" class="nav-btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="page-title">Nearby Restaurants</h2>
+    <div id="restaurantList" class="restaurant-grid">
+      <!-- Loaded by JS -->
+    </div>
+  </main>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

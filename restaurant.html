@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartEats - Menu</title>
+  <link rel="stylesheet" href="css/customer.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="logo">SmartEats</span>
+    </div>
+    <div class="nav-right">
+      <button onclick="goHome()" class="nav-btn">All Restaurants</button>
+      <button onclick="logout()" class="nav-btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main class="restaurant-page">
+    <section class="restaurant-info">
+      <h2 id="resName">Restaurant Name</h2>
+      <p id="resDetails">Loading details...</p>
+    </section>
+
+    <section class="menu-and-cart">
+      <!-- MENU -->
+      <div class="menu-section">
+        <h3>Menu</h3>
+        <div id="menuList" class="menu-list">
+          <!-- Menu items from JS -->
+        </div>
+      </div>
+
+      <!-- CART -->
+      <div class="cart-section">
+        <h3>Your Cart</h3>
+        <div id="cartItems"></div>
+        <p class="cart-total">Total: ₹<span id="cartTotal">0</span></p>
+
+        <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <textarea id="address" rows="3" placeholder="Enter your delivery address"></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="placeOrder()">Place Order</button>
+        <p id="orderMessage" class="message"></p>
+      </div>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/restaurant.js"></script>
+</body>
+</html>

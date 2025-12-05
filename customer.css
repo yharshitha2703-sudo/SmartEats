@@ -1,0 +1,331 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff6b35, #ff9f43);
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background: white;
+  color: #ff6b35;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-btn.outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.nav-btn:hover {
+  opacity: 0.9;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+  color: #111827;
+}
+
+/* RESTAURANT GRID */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  padding: 24px 40px;
+}
+
+.restaurant-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.restaurant-card h3 {
+  margin: 4px 0;
+}
+
+.restaurant-card p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.menu-btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #ff6b35;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* RESTAURANT PAGE LAYOUT */
+.restaurant-page {
+  padding: 16px 20px 24px;
+}
+
+.restaurant-info h2 {
+  margin-bottom: 4px;
+}
+
+.restaurant-info p {
+  margin-top: 0;
+  color: #6b7280;
+}
+
+.menu-and-cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.menu-section, .cart-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* MENU LIST */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.menu-item-info {
+  flex: 1;
+}
+
+.menu-item-title {
+  font-weight: 600;
+}
+
+.menu-item-price {
+  font-size: 14px;
+  color: #374151;
+}
+
+.menu-item-category {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.menu-item button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #10b981;
+  color: white;
+  cursor: pointer;
+}
+
+/* CART */
+.cart-section h3 {
+  margin-top: 0;
+}
+
+#cartItems {
+  max-height: 260px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.cart-item span {
+  display: inline-block;
+}
+
+.cart-total {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* FORM */
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .menu-and-cart {
+    grid-template-columns: 1fr;
+}
+}
+/* =======================
+   MY ORDERS PAGE
+   ======================= */
+
+.orders-list {
+  max-width: 900px;
+  margin: 24px auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.order-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-restaurant {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.order-items {
+  margin: 10px 0 12px;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.order-items li {
+  margin-bottom: 4px;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.order-footer strong {
+  font-size: 15px;
+  color: #111827;
+}
+
+/* STATUS BADGES */
+.status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-confirmed {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.status-out_for_delivery {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.status-delivered {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
